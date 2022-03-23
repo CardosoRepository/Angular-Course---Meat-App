@@ -148,7 +148,7 @@ Todas as imagens usadas na aplicação são pertencentes a freepik.com
 
 ##Observações
 1 - Rodar o comando "ng serve" no terminal para acompanhar as mudanças visualmente pelo navegadoe;
-2 - Rodar o comando "npm install -g json" na pasta raíz da aplicação. 
+2 - **CASO NÃO TENHA INSTALADO** Rodar o comando "npm install -g json" na pasta raíz da aplicação. 
 3 - db.json -> Tem as informações do banco de dados.
 4 - Rodar o comando "json-server db.json" para obter as informações dos objetos json.
 5 - Templates prontas para o desenvolvimento do projeto: https://github.com/cod3rcursos/meat-app-template.git -> Fonte: cod3rcursos
