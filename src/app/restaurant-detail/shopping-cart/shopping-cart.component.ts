@@ -1,5 +1,6 @@
-import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { MenuItem } from '../menu-item/menu-item.model';
+import { CartItem } from './cart-item.model';
 import { ShoppingCartService } from './shopping-cart.service';
 
 @Component({
@@ -19,7 +20,9 @@ export class ShoppingCartComponent implements OnInit {
 
   clear(){ this.shoppingCartService.clear() }
 
-  removeItem(item: any){ this.shoppingCartService.removeItem(item) }
+  removeItem(item: CartItem){ this.shoppingCartService.removeItem(item) }
 
-  addItem(item: any){ this.shoppingCartService.addItem(item) }
+  addItem(item: MenuItem){ this.shoppingCartService.addItem(item) }
+
+  length(): number { return this.shoppingCartService.length() }
 }
