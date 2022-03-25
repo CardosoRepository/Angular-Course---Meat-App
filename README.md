@@ -154,3 +154,4 @@ Todas as imagens usadas na aplicação são pertencentes a freepik.com
 5 - Templates prontas para o desenvolvimento do projeto: https://github.com/cod3rcursos/meat-app-template.git -> Fonte: cod3rcursos
 
 input-container.component.html -> input.label: significado?
+AULA 64 -> Sentido?
