@@ -14,7 +14,7 @@ export class ShoppingCartComponent implements OnInit {
   ngOnInit() {
   }
 
-  items(): any[]{ return this.shoppingCartService.items }
+  items(): CartItem[]{ return this.shoppingCartService.items }
 
   total(): number{ return this.shoppingCartService.total() }
 
