@@ -152,3 +152,5 @@ Todas as imagens usadas na aplicação são pertencentes a freepik.com
 3 - db.json -> Tem as informações do banco de dados.
 4 - Rodar o comando "json-server db.json" para obter as informações dos objetos json.
 5 - Templates prontas para o desenvolvimento do projeto: https://github.com/cod3rcursos/meat-app-template.git -> Fonte: cod3rcursos
+
+input-container.component.html -> input.label: significado?

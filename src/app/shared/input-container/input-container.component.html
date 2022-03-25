@@ -1,0 +1,8 @@
+<div class="form-group" [class.has-success]="hasSuccess()" 
+                        [class.has-error]="hasError()">
+  <label class="control-label sr-only" for="inputSuccess"><i ></i> {{label}}</label>
+  <!-- <input type="text" class="form-control" id="inputSuccess" name="address" required minlength="5" #input="ngModel" ngModel placeholder="Endereço" autocomplete="off"> Substituído pelo ng-content -->
+  <ng-content></ng-content>
+  <span class="help-block" *ngIf="hasSuccess()"><i class="fa fa-check"></i> Ok</span>
+  <span class="help-block" *ngIf="hasError()"><i class="fa fa-remove"></i> {{errorMessage}}</span>
+</div>
