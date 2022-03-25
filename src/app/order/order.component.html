@@ -34,9 +34,10 @@
           </div>
         </div>
         <div class="col-sm-4 col-xs-6">
-          <div class="form-group">
+          <div class="form-group" [class.has-success]="iptOptional.valid && (iptOptional.dirty || iptOptional.touched)">
             <label class="control-label sr-only" for="inputSuccess"><i class="fa fa-check"></i> Complemento</label>
-            <input type="text" class="form-control" id="inputSuccess" name="optional" ngModel placeholder="Complemento" autocomplete="off">
+            <input type="text" class="form-control" id="inputSuccess" name="optional" #iptOptional="ngModel" ngModel placeholder="Complemento" autocomplete="off">
+            <span class="help-block" *ngIf=" iptOptional.valid && (iptOptional.dirty || iptOptional.touched)"><i class="fa fa-check"></i> Ok</span>
           </div>
         </div>
         <!-- /.col -->
