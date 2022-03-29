@@ -1,3 +1,5 @@
+<!-- 'Estrelinhas' representando a avaliação do pedido -->
+<!-- Se encontra após a finalização do pedido -->
 <i *ngFor="let r of rates" 
     class="fa" [class.fa-star]="r <= rate" 
     [class.fa-star-o]="r > rate"

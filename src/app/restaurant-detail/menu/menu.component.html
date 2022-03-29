@@ -1,3 +1,8 @@
+<!-- 
+  Componente pai 'Menu' responsável por:
+  1 - Listar o menu do restaurante
+  2 - Adicionar itens escolhidos ao carrinho
+-->
 <div class="col-md-9 col-xs-12">
   <mt-menu-item *ngFor="let item of menu | async" [menuItem]="item" (add)="shoppingCart.addItem($event)"></mt-menu-item>
 </div>
