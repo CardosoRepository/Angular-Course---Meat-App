@@ -3,6 +3,7 @@ import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { PreloadAllModules, RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -34,6 +35,7 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     ReactiveFormsModule,
