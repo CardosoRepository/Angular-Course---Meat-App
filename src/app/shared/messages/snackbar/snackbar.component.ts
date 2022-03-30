@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { NotificationService } from '../notification.service';
 import 'rxjs/add/observable/timer'
+import 'rxjs/add/operator/do'
+import 'rxjs/add/operator/switchMap'
 import { Observable } from 'rxjs';
 
 @Component({
@@ -32,10 +34,11 @@ export class SnackbarComponent implements OnInit {
   constructor(private notificationService: NotificationService) { }
 
   ngOnInit() {
-    this.notificationService.notifier.subscribe(message => {
-      this.message = message
-      this.snackVisibility = 'visible'
-      Observable.timer(3000).subscribe(timer => this.snackVisibility = 'hidden')
-    })
+    this.notificationService.notifier
+      .do(message => {
+        this.message = message
+        this.snackVisibility = 'visible'
+    }).switchMap(message => Observable.timer(3000)) //switchMap troca o Observable e faz o Unsubscribe do Observable antigo
+      .subscribe(timer => this.snackVisibility = 'hidden')
   }
 }
