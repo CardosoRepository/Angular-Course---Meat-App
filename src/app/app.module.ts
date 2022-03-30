@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { PreloadAllModules, RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -44,7 +45,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules }),
     SharedModule.forRoot()
   ],
-  providers: [{provide: LOCALE_ID, useValue: 'pt-BR'}],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, {provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
