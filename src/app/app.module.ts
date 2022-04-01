@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { PreloadAllModules, RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
@@ -40,7 +40,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules }),
     SharedModule.forRoot()
