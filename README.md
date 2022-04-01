@@ -150,8 +150,11 @@ Todas as imagens usadas na aplicação são pertencentes a freepik.com
 1 - Rodar o comando "ng serve" no terminal para acompanhar as mudanças visualmente pelo navegadoe;
 2 - **CASO NÃO TENHA INSTALADO** Rodar o comando "npm install -g json" na pasta raíz da aplicação. 
 3 - db.json -> Tem as informações do banco de dados.
-4 - Rodar o comando "json-server db.json" para obter as informações dos objetos json.
+4 - *** ANTIGO -> Ir para o passo 7*** Rodar o comando "json-server db.json" para obter as informações dos objetos json.
 5 - Templates prontas para o desenvolvimento do projeto: https://github.com/cod3rcursos/meat-app-template.git -> Fonte: cod3rcursos
-
+7 - Rodar do 1º terminal: nodemon --watch backend backend/dist/server.js
+  .1 - Rodar no 2º terminal: ng serve
+  .2 - Rodar no 3º terminal (./backend): tcs -w
+  
 input-container.component.html -> input.label: significado?
 AULA 64 -> Sentido?
