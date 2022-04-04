@@ -9,7 +9,7 @@ import { RadioComponent } from "./radio/radio.component";
 import { RatingComponent } from "./rating/rating.component";
 import { SnackbarComponent } from "./messages/snackbar/snackbar.component";
 import { NotificationService } from "./messages/notification.service";
-
+import { LoginService } from "app/security/login/login.service";
 @NgModule({
     declarations: [InputContainerComponent, RadioComponent, RatingComponent, SnackbarComponent],
     imports: [CommonModule, FormsModule, ReactiveFormsModule],
@@ -20,7 +20,7 @@ export class SharedModule {
     static forRoot(): ModuleWithProviders{
         return{
             ngModule: SharedModule,
-            providers: [ShoppingCartService, RestaurantsService, OrderService, NotificationService]
+            providers: [ShoppingCartService, RestaurantsService, OrderService, NotificationService, LoginService]
         }
     }
 }
