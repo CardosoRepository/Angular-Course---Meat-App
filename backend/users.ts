@@ -8,7 +8,7 @@ export class User{
     }
 }
 
-export const users = { //Array de User indexado pelo e-mail
+export const users: {[key: string]: User} = { //Array de User indexado pelo e-mail
     "juliana@gmail.com": new User('juliana@gmail.com', 'Juliana', 'juliana23'),
     "amanda@gmail.com": new User('amanda@gmail.com', 'Amanda', 'amanda23')
 }
